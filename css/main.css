@@ -221,4 +221,7 @@ Responsive
   #cover{
     background-position: 50% 0;
   }
+  .modal-content {
+    width: 90%;
+  }
 }
