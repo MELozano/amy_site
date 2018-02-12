@@ -1,4 +1,11 @@
+$('.modal-background').hide();
+
+
+$('#close').on('click', function() {
+  $('.modal-background').fadeOut(300);
+});
 // Event for when the form is submitted
+
 $('form').on('submit', function (event) {
   event.preventDefault();
   var fullName = $('#name').val();
@@ -8,6 +15,7 @@ $('form').on('submit', function (event) {
   } else{
     $('#name').removeClass('error');
     $('#errorName').fadeOut('hidden')
+    // $('.modal-background').fadeIn(300);
   }
   var fullEmail = $('#email').val();
   if (fullEmail.length <= 0){
@@ -17,7 +25,20 @@ $('form').on('submit', function (event) {
     $('#email').removeClass('error');
     $('#errorEmail').fadeOut('300')
   }
+  if (fullEmail.length > 0 && fullName.length >= 0){
+    $('.modal-background').fadeIn(300);
+  }
 });
+
+
+
+// $('#showModal').on('click', function() {
+//   $('.modal-background').fadeIn(300);
+// });
+//
+// $('#close').on('click', function() {
+//   $('.modal-background').fadeOut(300);
+// });
 
 // if fullname field value is 0
   //add red border to #name

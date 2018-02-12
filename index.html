@@ -103,6 +103,7 @@
       </div>
       <div id="content">
         <form action="https://formspree.io/aoomens@gmail.com" method="post">
+        <!-- <form action=""> -->
           <input type="text" id="name" placeholder="Full Name *" name="full-name">
           <p id="errorName">A name is required to participate in a functioning society.</p>
           <input type="email" id="email" placeholder="Email *" name="_replyto">
@@ -110,10 +111,18 @@
           <input type="text" placeholder="Subject" name="_subject">
           <input type="text" name="_gotcha" style="display:none" />
           <textarea placeholder="Message" name="message"></textarea>
-          <button type="submit">Submit</button>
+          <button type="submit" id="showModal">Submit</button>
         </form>
       </div>
   </section>
+
+  <div class="modal-background">
+    <div class="modal-content">
+      <h3>Thanks for Reaching Out!</h3>
+      <button id="close">Close</button>
+    </div>
+  </div>
+
   <footer>
     <h3>"We often take for granted the very things that most deserve our gratitude"</h3>
     <p class="date">-Cynthia Ozyick</p>
