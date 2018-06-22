@@ -38,7 +38,7 @@ body{
   text-align: center;
 }
 
-#job{
+.job{
   margin-bottom: 90px;
 }
 #highlights, #experience, #education{
