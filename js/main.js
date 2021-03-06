@@ -1,30 +1,6 @@
-$('.modal-background').hide();
-
-$('#close').on('click', function() {
-  $('.modal-background').fadeOut(300);
-  $('form').trigger("reset");
-});
-// Event for when the form is submitted
-
-$('form').on('submit', function (event) {
-  event.preventDefault();
-  var fullName = $('#name').val();
-  if (fullName.length <= 0){
-    $('#name').addClass('error');
-    $('#errorName').fadeIn('300')
-  } else{
-    $('#name').removeClass('error');
-    $('#errorName').fadeOut('hidden')
-  }
-  var fullEmail = $('#email').val();
-  if (fullEmail.length <= 0){
-    $('#email').addClass('error');
-    $('#errorEmail').fadeIn('300')
-  } else{
-    $('#email').removeClass('error');
-    $('#errorEmail').fadeOut('300')
-  }
-  if (fullEmail.length > 0 && fullName.length >= 0){
-    $('.modal-background').fadeIn(300);
-  }
-});
+// Set the default
+"editor.formatOnSave": false,
+// Enable per-language
+"[javascript]": {
+    "editor.formatOnSave": true
+}
