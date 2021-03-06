@@ -64,6 +64,17 @@ li{
 }
 
 /* ----------------------------------------
+Book Recs
+------------------------------------------- */
+.book-recs{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.book-recs a{
+  margin: 0 0 16px 0;
+}
+/* ----------------------------------------
 Downloads
 ------------------------------------------- */
 .download-cont{
@@ -76,6 +87,9 @@ Downloads
   border-radius: 25px;
   overflow: hidden;
   background-color: #d7ac39;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .download .info{
   position: absolute;
@@ -166,16 +180,19 @@ i{
 /* ----------------------------------------
 Interaction
 ------------------------------------------- */
-.book-recs a{
-  margin: 0 10px 10px 0;
-}
-
 a:hover{
   color: #333;
 }
 /* ----------------------------------------
 Responsive
 ------------------------------------------- */
+@media only screen and (max-width: 1290px) {
+  .download-cont{
+    grid-template-columns: 1fr;
+    grid-template-rows: 30vh;
+  }
+}
+
 @media only screen and (max-width: 1024px) {
   #cover{
     background-position: 30% 0;
@@ -197,6 +214,8 @@ Responsive
   }
   .download-cont{
     grid-template-columns: 1fr;
+    grid-template-rows: none;
+
   }
   .download .info{
     bottom: 0%;
